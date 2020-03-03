@@ -10,7 +10,7 @@ namespace Run_Length_Encode
     {
         static void Main(string[] args)
         {
-            string raw1 = "bbbbsssddd bds wwwweeee lk kkjsdhfnnnn hhhhiiiiiqwe wieiekkkkri kk3p sjddjdddiop ioooiieeerruuuuuu";
+            /*string raw1 = "bbbbsssddd bds wwwweeee lk kkjsdhfnnnn hhhhiiiiiqwe wieiekkkkri kk3p sjddjdddiop ioooiieeerruuuuuu";
             string raw2 = "4444444423455623456.4555555878888888888886555556764566533333295292834j";
             string encode1 = Encoder.Encode(raw1);
             string encode2 = Encoder.Encode(raw2);
@@ -19,7 +19,7 @@ namespace Run_Length_Encode
             Console.WriteLine(encode1);
             Console.WriteLine(decode1);
             Console.WriteLine(raw2);
-            Console.WriteLine(encode2);
+            Console.WriteLine(encode2);*/
             Controller.Initialize();
         }
     }

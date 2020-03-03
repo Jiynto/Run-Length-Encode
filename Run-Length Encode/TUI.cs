@@ -9,6 +9,7 @@ namespace Run_Length_Encode
 {
     public static class TUI
     {
+
         public static void Initialize(string[] files, int fileNumber)
         {
             Console.WriteLine("Current files:");
@@ -53,10 +54,9 @@ namespace Run_Length_Encode
 
         public static void WrongFileFormat()
         {
-            Console.WriteLine("Cannot decode file as it is not in the correct format");
-            Console.WriteLine("Please try again with a different file/option");
+            Console.WriteLine("Cannot decode file as it is not in the correct format.");
+            Console.WriteLine("Please try again with a different file/option.");
         }
-
 
     }
 }

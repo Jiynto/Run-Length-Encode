@@ -16,6 +16,7 @@ namespace Run_Length_Encode
         public static string[] GetFiles()
         {
             return Directory.GetFiles("Files/");
+
         }
 
         public static void OpenFile(string fileName)
@@ -32,6 +33,7 @@ namespace Run_Length_Encode
 
         public static void WriteFile(string fileText, string fileName)
         {
+            if (fileStream != null) fileStream.Close();
             File.WriteAllText(fileName, fileText);
         }
 

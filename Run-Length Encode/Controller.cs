@@ -71,12 +71,16 @@ namespace Run_Length_Encode
 
         private static void EncodeFile()
         {
+
             string result = Encoder.Encode(file);
-            FileHandler.WriteFile(result, filePath + "Encoded");
+            FileHandler.WriteFile(result, filePath);
             float compressionRatio = Encoder.CompressionRatio(file.Length, result.Length);
             TUI.DisplayProcess(file, result);
             TUI.DisplayCompressionRatio(compressionRatio);
             Initialize();
+
+
+            
         }
 
         private static void DecodeFile()
@@ -84,7 +88,7 @@ namespace Run_Length_Encode
             if (Encoder.correctFormat(file))
             {
                 string result = Encoder.Decode(file);
-                FileHandler.WriteFile(result, filePath + "Decoded");
+                FileHandler.WriteFile(result, filePath);
                 TUI.DisplayProcess(file, result);
                 Initialize();
             }
