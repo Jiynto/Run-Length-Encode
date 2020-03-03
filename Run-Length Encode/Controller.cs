@@ -81,10 +81,19 @@ namespace Run_Length_Encode
 
         private static void DecodeFile()
         {
-            string result = Encoder.Decode(file);
-            FileHandler.WriteFile(result, filePath + "Decoded");
-            TUI.DisplayProcess(file, result);
-            Initialize();
+            if (Encoder.correctFormat(file))
+            {
+                string result = Encoder.Decode(file);
+                FileHandler.WriteFile(result, filePath + "Decoded");
+                TUI.DisplayProcess(file, result);
+                Initialize();
+            }
+            else
+            {
+                TUI.WrongFileFormat();
+                Initialize();
+            }
+            
         }
 
 

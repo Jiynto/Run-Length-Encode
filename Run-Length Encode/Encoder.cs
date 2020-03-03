@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Run_Length_Encode
 {
@@ -25,7 +26,7 @@ namespace Run_Length_Encode
 
 
 
-        public static string Decode(string inputString) =>  inputString.Aggregate(
+        public static string Decode(string inputString) => inputString.Aggregate(
             (count: 1, occurance: 0, workingString: new StringBuilder()), 
                 (workingTuple, currentChar) => IsEven(workingTuple.count) 
                 ? (workingTuple.count + 1, workingTuple.occurance, workingTuple.workingString.Append(new string(currentChar, workingTuple.occurance)))
@@ -33,6 +34,12 @@ namespace Run_Length_Encode
                 a => a.workingString.ToString());
 
 
+
+        public static bool correctFormat(string input)
+        {
+            bool isOk = Regex.IsMatch(input, @"^(\d{1}\D{1})+");
+            return isOk;
+        }
 
         public static bool IsEven(int count) => count % 2 == 0 ? true : false;
     }

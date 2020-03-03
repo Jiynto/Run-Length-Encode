@@ -51,6 +51,12 @@ namespace Run_Length_Encode
             Console.WriteLine("Compression ratio: " + ratio);
         }
 
+        public static void WrongFileFormat()
+        {
+            Console.WriteLine("Cannot decode file as it is not in the correct format");
+            Console.WriteLine("Please try again with a different file/option");
+        }
+
 
     }
 }
